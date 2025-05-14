@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeuSite.com - Clicou, comprou!!!</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style-media.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <!-- LOGO DO EMPRESA -->
+    <div class="logo">
+      <img src="./img/logo-empresa.png" alt="Logo do MeuSite.com">
+    </div>
+    <!-- BARRA DE BUSCAS -->
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar...">
+      <button type="submit">Buscar</button>
+    </div>
+    <!-- ICONE CARRINHO-->
+    <button id="toggleSidebar" aria-label="Carrinho">🛒 Carrinho <span id="quantProduto">(0)</span></button>
+
+    <!-- MENU -->
+    <nav>
+      <ul class="menuCategorias">
+        <li><a href="javascript:void(0);" data-categoria="Todos">Home</a></li>
+        <li><a href="javascript:void(0);" data-categoria="Eletrônicos">Eletrônicos</a></li>
+        <li><a href="javascript:void(0);" data-categoria="Informática">Informática</a></li>
+        <li><a href="javascript:void(0);" data-categoria="Eletroportáteis">Eletroportáteis</a></li>
+        <li><a href="javascript:void(0);" data-categoria="Smart Home">Smart Home</a></li>
+        <li><a href="javascript:void(0);" data-categoria="Games">Games</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <div class="container">
+  
+    <main>
+
+     <section>
+      <h2 id="totalProdutos">Produtos</h2>
+      <ul id="mainProdutosLista"></ul>
+    </section>
+
+    </main>
+    <aside id="cart">
+      <h2>Meu Carrinho</h2>
+      <button id="closeSidebar" aria-label="Fechar Carrinho">X</button>
+      <ul class="cart-items"></ul>
+      <div class="total-carrinho">
+        
+      </div>  
+      <button class="btn-finalizar">Finalizar Compra</button>
+ 
+    </aside>
+  </div>
+
+  <footer>
+    <p>Todos os direitos reservados - MeuSite.com</p>
+    <p>Desenvolvido por ...</p>
+  </footer>
+
+  
+  <script src="./dado.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
