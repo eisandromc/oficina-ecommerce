@@ -37,19 +37,15 @@ function adicionarAoCarrinho(id) {
 }
 // renderiza os produtos no carrinhO
 function renderizarCarrinho() {
-  // Seleciona a <ul> que exibe os itens do carrinho (com classe 'cart-items')
+  
   const ul = document.querySelector(".cart-items");
-  // Inicia um contador para somar quantos produtos serão exibidos no carrinho
   let contadorTotal = 0;
-  // Limpa o conteúdo atual da lista para evitar duplicações
+
   ul.innerHTML = ""; 
-  // Percorre cada produto dentro do array 'colecaoCarrinho'
   colecaoCarrinho.forEach(produto => {
-    // Cria um novo elemento <li> para cada item do carrinho
+  
     const li = document.createElement("li");
-    // Adiciona um atributo 'data-id' ao <li> com o ID do produto (útil para ações futuras)
     li.setAttribute("data-id", produto.id);
-    // Define o conteúdo HTML interno do <li>, com imagem, nome, preço, quantidade e botão de remover
     li.innerHTML = `
       <img src="./img/${produto.foto}" alt="${produto.nome}">
       <div class="cart-info">
@@ -59,16 +55,13 @@ function renderizarCarrinho() {
         <button class="btn-remover">Remover</button>
       </div>
     `;
-    // Adiciona o <li> à <ul> do carrinho
     ul.appendChild(li);
-    // Incrementa o contador total de produtos (quantidade de linhas no carrinho)
     contadorTotal++;
+    
   });
-  // Mostra no console o número total de produtos renderizados no carrinho
-  console.log(contadorTotal);
-  // Atualiza o texto do elemento com id 'quantProduto' com o número total entre parênteses
-  document.getElementById
+  document.getElementById("quantProduto").textContent = `(${contadorTotal})`;
 }
+
 
 // atualiza o total do carrinho
 function atualizarTotalCarrinho() {
